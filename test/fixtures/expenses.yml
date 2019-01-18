@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  traveler: MyString
+  date: MyString
+  city: MyString
+  cost: 1
+  description: MyString
+
+two:
+  traveler: MyString
+  date: MyString
+  city: MyString
+  cost: 1
+  description: MyString

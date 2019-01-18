@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Expense Details</h1>
+<h2>Number of Entries per traveler</h2>
+ <p><%= @travelers %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Traveler</th>
+      <th>Date</th>
+      <th>City</th>
+      <th>Cost</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense.traveler %></td>
+        <td><%= expense.date %></td>
+        <td><%= expense.city %></td>
+        <td><%= expense.cost %></td>
+        <td><%= expense.description %></td>
+        <td><%= link_to 'Show', expense %></td>
+        <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
+        <td><%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expense', new_expense_path %>
